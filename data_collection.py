@@ -62,3 +62,15 @@ else:
 print("data Collected successfully!")
 print(df.to_string(index=False))
 print("\nsaved to:", file_path)
+
+import pandas as pd
+
+df = pd.read_csv("data/chennai_weather_air_quality.csv")
+
+print(df.head())
+print("\nDataset shape:", df.shape)
+print("\nColumn names:")
+print(df.columns.tolist())
+
+print("\nMissing values:")
+print(df.isnull().sum())
